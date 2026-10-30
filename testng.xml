@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="apiutilities.ExtentReportManager"/>
+    </listeners>
+    <test thread-count="5" name="PetTests">
+        <classes>
+            <class name="apitest.DDTests">
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="testDeleteUser"/>
+                </methods>
+            </class>
+            <class name="apitest.UserTests2">
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="testGetUser"/>
+                    <include name="testupdateUserByName"/>
+                    <include name="testDeleteuser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
